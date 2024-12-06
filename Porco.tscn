@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://dtrep0yikl7aq"]
+
+[ext_resource type="Texture2D" uid="uid://d1s8skwvrpi8f" path="res://Sprites/PorcoPreto-Sheet.png" id="1_b673e"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ov1c8"]
+atlas = ExtResource("1_b673e")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f1y5v"]
+atlas = ExtResource("1_b673e")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0p018"]
+atlas = ExtResource("1_b673e")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2uii0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ov1c8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f1y5v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0p018")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2l7oc"]
+size = Vector2(14, 9)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_2uii0")
+frame = 2
+frame_progress = 0.494337
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 2.5)
+shape = SubResource("RectangleShape2D_2l7oc")

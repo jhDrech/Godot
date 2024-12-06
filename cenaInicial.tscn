@@ -1,0 +1,124 @@
+[gd_scene load_steps=9 format=3 uid="uid://crrvvuuyulchh"]
+
+[ext_resource type="Texture2D" uid="uid://v0pq83gywjm" path="res://Mapa/Background/Stars iphone6+.png" id="1_55jbw"]
+[ext_resource type="Texture2D" uid="uid://denbqxs2oh4iq" path="res://Mapa/Background/buildings2 iphone6+.png" id="2_4a6x3"]
+[ext_resource type="Texture2D" uid="uid://xxh1c2ytt1sb" path="res://Mapa/Background/buildings1 iphone6+.png" id="3_pesq8"]
+[ext_resource type="Texture2D" uid="uid://lvjm4bgc87t1" path="res://Sprites/moon.png" id="4_igpcm"]
+[ext_resource type="Texture2D" uid="uid://bnemcmqkq4ucw" path="res://Sprites/tiles.png" id="5_80r4q"]
+[ext_resource type="PackedScene" uid="uid://dsalua0os1a3i" path="res://Player.tscn" id="6_to2h8"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o2b7y"]
+texture = ExtResource("5_80r4q")
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:2/0 = 0
+3:3/0 = 0
+2:3/0 = 0
+1:3/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+5:3/0 = 0
+5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:3/0 = 0
+6:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:2/0 = 0
+6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:1/0 = 0
+6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:1/0 = 0
+7:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:1/0 = 0
+8:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:2/0 = 0
+8:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:2/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+8:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:3/0 = 0
+9:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+11:3/0 = 0
+11:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+12:3/0 = 0
+12:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+11:1/0 = 0
+11:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+12:1/0 = 0
+12:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+14:1/0 = 0
+14:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+14:2/0 = 0
+14:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+16:1/0 = 0
+16:2/0 = 0
+18:3/0 = 0
+18:2/0 = 0
+18:1/0 = 0
+19:1/0 = 0
+20:1/0 = 0
+21:1/0 = 0
+21:2/0 = 0
+21:3/0 = 0
+20:3/0 = 0
+19:3/0 = 0
+20:2/0 = 0
+23:3/0 = 0
+23:2/0 = 0
+23:1/0 = 0
+24:1/0 = 0
+24:2/0 = 0
+24:3/0 = 0
+27:3/0 = 0
+28:3/0 = 0
+26:3/0 = 0
+27:2/0 = 0
+28:2/0 = 0
+26:2/0 = 0
+29:2/0 = 0
+30:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_v3iyc"]
+physics_layer_0/collision_layer = 3
+sources/0 = SubResource("TileSetAtlasSource_o2b7y")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-5, 3)
+
+[node name="StarsIphone6+" type="Sprite2D" parent="."]
+position = Vector2(-1.50007, 4)
+scale = Vector2(0.525815, 0.522544)
+texture = ExtResource("1_55jbw")
+metadata/_edit_lock_ = true
+
+[node name="Buildings2Iphone6+" type="Sprite2D" parent="."]
+position = Vector2(-3, 211)
+scale = Vector2(0.559753, 0.779545)
+texture = ExtResource("2_4a6x3")
+metadata/_edit_lock_ = true
+
+[node name="Buildings1Iphone6+" type="Sprite2D" parent="."]
+position = Vector2(10, 217)
+scale = Vector2(0.363089, 0.61)
+texture = ExtResource("3_pesq8")
+metadata/_edit_lock_ = true
+
+[node name="Moon" type="Sprite2D" parent="."]
+position = Vector2(329, -303)
+rotation = -1.56635
+scale = Vector2(2.49004, 2.54)
+texture = ExtResource("4_igpcm")
+
+[node name="TileMap" type="TileMap" parent="Moon"]
+rotation = -0.00646664
+tile_set = SubResource("TileSet_v3iyc")
+format = 2
+layer_0/tile_data = PackedInt32Array(-1376272, 458752, 1342177281, -1310736, 458752, 1342177281, -1245200, 458752, 1342177281, -1179664, 458752, 1342177281, -1114128, 458752, 1342177281, -1048592, 458752, 1342177281, -983056, 458752, 1342177281, -917520, 458752, 1342177281, -851984, 458752, 1342177281, -786448, 458752, 1342177281, -720912, 458752, 1342177281, -655376, 458752, 1342177281, -589840, 458752, 1342177281, -524304, 458752, 1342177281, -458768, 458752, 1342177281, -393232, 458752, 1342177281, -327696, 458752, 1342177281, -262160, 458752, 1342177281, -196624, 458752, 1342177281, -131088, 458752, 1342177281, -65552, 458752, 1342177281, -16, 458752, 1342177281, 65520, 458752, 1342177281, 131056, 458752, 1342177281, 196592, 458752, 1342177281, 262128, 458752, 1342177281, 327664, 458752, 1342177281, 393200, 458752, 1342177281, -1441808, 720896, 1342177281, -15, 458752, 1342177281, 65521, 917504, 1342177282, 65522, 458752, 1342177281, 131057, 917504, 1342177282, 131058, 458752, 1342177281, 196594, 458752, 1342177281, 196593, 917504, 1342177282, 262129, 917504, 1342177282, 262130, 458752, 1342177281, 327665, 917504, 1342177282, 327666, 458752, 1342177281, 393202, 458752, 1342177281, 393201, 917504, 1342177282, 131061, 1179648, 1342177281, 131060, 1179648, 1342177282, 131059, 1179648, 1342177283, 196597, 1245184, 1342177281, 262133, 1310720, 1342177281, 262132, 1310720, 1342177282, 327669, 1376256, 1342177281, 327668, 1376256, 1342177282, 327667, 1376256, 1342177283, 131062, 1179648, 1342177281, 196598, 1245184, 1342177281, 327670, 1376256, 1342177281, 262134, 1310720, 1342177281)
+
+[node name="Player" parent="." instance=ExtResource("6_to2h8")]
+position = Vector2(-531, 254)
